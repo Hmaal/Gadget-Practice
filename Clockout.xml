@@ -2,6 +2,9 @@
 
 	<Module>
 		<ModulePrefs title="Clockout Session" />
+		<UserPref name="learnedToday" display_name="What did you learn today?" height="400" />
+		<UserPref name="codeNotes" display_name="Any code snippets today?" datatype="bool" default_value="false" />
+		
 		<Content type="html">
 			<![CDATA[ Hello, Wolrd!! ]]>
 		</Content>
