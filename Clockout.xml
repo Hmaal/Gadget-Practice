@@ -12,7 +12,7 @@
 				
 				var pref = new gadgets.Prefs();
 				
-				Hello, World!! 
+				<b> Hello, World! </b> 
 			
 			
 			]]>
