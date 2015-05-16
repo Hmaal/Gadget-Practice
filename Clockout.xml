@@ -8,7 +8,14 @@
 		<UserPref name="codeNotes" display_name="Any code snippets today?" datatype="bool" default_value="false" required="true" />
 		
 		<Content type="html">
-			<![CDATA[ Hello, World!! ]]>
+			<![CDATA[ 
+				
+				var pref = new gadgets.Prefs();
+				
+				Hello, World!! 
+			
+			
+			]]>
 		</Content>
 	</Module>
 		
