@@ -15,7 +15,7 @@
 					var today = new Date();
 					var time = today.getTime();
 					
-					var html = "<!DOCTYPE HTML>"
+					var html = "<!DOCTYPE HTML>";
 					html += " <b> Hello, World! </b> <br/> <br/>";
 					html += " Today is " + today + " and the time is " + time + ".";
 					
