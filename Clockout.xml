@@ -8,6 +8,15 @@
 					 
 		<UserPref name="learnedToday" display_name="What did you learn today?" height="200" />
 		<UserPref name="codeNotesOpt" display_name="Any code snippets today?" datatype="bool" default_value="false" required="true" />
+		<UserPref name="mycolor" display_name="Color" default_value="Yellow" datatype="enum" >
+    		<EnumValue value="Red" />
+	     	<EnumValue value="Aqua" />
+	     	<EnumValue value="Lime" />
+	     	<EnumValue value="Yellow" />
+	     	<EnumValue value="Pink" />
+	     	<EnumValue value="Orange" />
+			<EnumValue value="White" />
+	  	 </UserPref>
 		
 		<Content type="html">
 			<![CDATA[ 
@@ -22,15 +31,26 @@
 				  	var prefCondeNotesOpt = pref.getBool('codeNotesOpt');
 					  
 					var html = "";
+					
+					var today;
+					var tomorrow;
 					var time;
 					var month;
 					var date;
 					var weekDay;
 					var year;
 					
+					//var user = 'Primary';
+					var eventStartDate = 'timeMin=';
+					var eventEndDate = 'timeMax=';
+					var apiKey = 'key=AIzaSyDI61YZZjS2eCSSqHWarUwvJ7QXG7SS7LY';
+					var getRequest = 'GET https://www.googleapis.com/calendar/v3/calendars/primary/events?' + eventStartDate + '&' + eventEndDate + '&' + apiKey;
+					var customRequest;
+					
 					function getDateInfo()
 					{
-						var today = new Date();
+						today = new Date();
+						// tomorrow = 
 						
 						var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 						var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -51,7 +71,12 @@
 					
 					function loadEvents()
 					{
-					
+						// Vars eventEndDate and eventStartDate are going to be dependent upon up the date.
+						// 	will need to be built.
+						
+						// Need to encode data in format YEAR-__(Month)-__(Day)T00:00:00-00:00.
+						eventStartDate += encodeURI(today.getYear() + '-' + today.getMonth() + '-' + today.getDay() + 'T00:00:00-00:00');
+						//eventEndDate += encodeURI(tomorrow.getYear() + '-' + tomorrow.getMonth() + '-' + tomorrow.getDay() + 'T00:00:00-00:00'); 
 					}
 					
 					function loadForm()
