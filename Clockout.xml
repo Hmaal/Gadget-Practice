@@ -12,13 +12,15 @@
 			<![CDATA[ 
 				<script type='text/javascript'>
 					
-					function start()
+					var pref = new gadgets.Prefs();
+					var html = "";
+					
+					function getDateInfo()
 					{
-						var pref = new gadgets.Prefs();
 						var today = new Date();
 						var time = today.getTime();
 						
-						var html = ""; //<!DOCTYPE HTML>
+						//var html = ""; //<!DOCTYPE HTML>
 						html += " <b> Hello, World! </b> <br/> <br/>";
 						html += " Today is " + today + " and the time is " + time + ".";
 						
@@ -26,7 +28,7 @@
 						cdata.innerHTML = html;
 					}
 					
-					gagdets.util.registerOnLoadHandler(start);
+					gadgets.util.registerOnLoadHandler(start);
 					
 				</script>
 				
