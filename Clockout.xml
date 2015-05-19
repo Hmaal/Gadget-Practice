@@ -28,7 +28,7 @@
 						cdata.innerHTML = html;
 					}
 					
-					gadgets.util.registerOnLoadHandler(start);
+					gadgets.util.registerOnLoadHandler(getDateInfo);
 					
 				</script>
 				
