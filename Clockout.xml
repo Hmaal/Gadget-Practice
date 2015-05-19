@@ -4,17 +4,25 @@
 		<ModulePrefs title="Clockout Session"
 					 author="Hmaal"
 					 author_email="judgemg09@gmail.com" />
+					 
 		<UserPref name="learnedToday" display_name="What did you learn today?" height="400" />
 		<UserPref name="codeNotes" display_name="Any code snippets today?" datatype="bool" default_value="false" required="true" />
 		
 		<Content type="html">
 			<![CDATA[ 
+				<!DOCTYPE HTML>
+				<html>
 				
-				var pref = new gadgets.Prefs();
-				
-				<b> Hello, World! </b> 
-			
-			
+					<body>
+						<script>
+							var pref = new gadgets.Prefs();
+						</script>
+						
+						<b> Hello, World! </b> 
+						
+					</body>
+
+				</html>
 			]]>
 		</Content>
 	</Module>
