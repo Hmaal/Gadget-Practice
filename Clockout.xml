@@ -5,7 +5,7 @@
 					 author="Hmaal"
 					 author_email="judgemg09@gmail.com" />
 					 
-		<UserPref name="learnedToday" display_name="What did you learn today?" height="400" />
+		<UserPref name="learnedToday" display_name="What did you learn today?" height="200" />
 		<UserPref name="codeNotesOpt" display_name="Any code snippets today?" datatype="bool" default_value="false" required="true" />
 		
 		<Content type="html">
@@ -13,6 +13,10 @@
 				<script type='text/javascript'>
 					
 					var pref = new gadgets.Prefs();
+					//var prefUserName = prefs.getBool("BoolPrefName");
+					var prefLearnedToday = prefs.getString("StringPrefName");
+				  	var prefCondeNotesOpt = prefs.getBool('codeNotesOpt');
+					  
 					var html = "";
 					
 					function getDateInfo()
@@ -29,7 +33,7 @@
 						
 						//var html = ""; //<!DOCTYPE HTML>
 						html += " <b> Hello, World! </b> <br/> <br/>";
-						html += " Today is " + month + " " + date + ", " + weekDay + " and the time is " + time + ".";
+						html += " Today is " + weekDay + " " + month + " " + date + ".";
 						
 						var cdata = document.getElementById('cdata');
 						cdata.innerHTML = html;
