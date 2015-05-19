@@ -11,16 +11,23 @@
 		<Content type="html">
 			<![CDATA[ 
 				<script type='text/javascript'>
-					var pref = new gadgets.Prefs();
-					var today = new Date();
-					var time = today.getTime();
 					
-					var html = ""; //<!DOCTYPE HTML>
-					html += " <b> Hello, World! </b> <br/> <br/>";
-					html += " Today is " + today + " and the time is " + time + ".";
+					function start()
+					{
+						var pref = new gadgets.Prefs();
+						var today = new Date();
+						var time = today.getTime();
+						
+						var html = ""; //<!DOCTYPE HTML>
+						html += " <b> Hello, World! </b> <br/> <br/>";
+						html += " Today is " + today + " and the time is " + time + ".";
+						
+						var cdata = document.getElementById('cdata');
+						cdata.innerHTML = html;
+					}
 					
-					var cdata = document.getElementById('cdata');
-					cdata.innerHTML = html;
+					gagdets.util.registerOnLoadHandler(start);
+					
 				</script>
 				
 				<div id='cdata'> </div>
