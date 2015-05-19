@@ -22,6 +22,11 @@
 				  	var prefCondeNotesOpt = pref.getBool('codeNotesOpt');
 					  
 					var html = "";
+					var time;
+					var month;
+					var date;
+					var weekDay;
+					var year;
 					
 					function getDateInfo()
 					{
@@ -30,22 +35,28 @@
 						var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 						var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 						
-						var time = today.getTime();
-						var month = months[today.getMonth()];
-						var date = today.getDate().toString();
-						var weekDay = week[today.getDay()];
+						time = today.getTime();
+						month = months[today.getMonth()];
+						date = today.getDate().toString();
+						weekDay = week[today.getDay()];
+						year = today.getYear();
 						
 						//var html = ""; //<!DOCTYPE HTML>
 						html += " <b> Hello, World! </b> <br/> <br/>";
-						html += "Today is " + weekDay + " " + month + " " + date + ".";
+						html += "Today is " + weekDay + " " + month + " " + date + "." + year;
 						
 						var cdata = document.getElementById('cdata');
 						cdata.innerHTML = html;
 					}
 					
+					function loadEvents()
+					{
+					
+					}
+					
 					function loadForm()
 					{
-						//
+						
 					}
 					
 					gadgets.util.registerOnLoadHandler(getDateInfo);
