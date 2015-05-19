@@ -18,11 +18,18 @@
 					function getDateInfo()
 					{
 						var today = new Date();
+						
+						var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+						var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+						
 						var time = today.getTime();
+						var month = months[today.getMonth()];
+						var date = today.getDate().toString();
+						var weekDay = week[today.getDay()];
 						
 						//var html = ""; //<!DOCTYPE HTML>
 						html += " <b> Hello, World! </b> <br/> <br/>";
-						html += " Today is " + today + " and the time is " + time + ".";
+						html += " Today is " + month + " " + date + ", " + weekDay + " and the time is " + time + ".";
 						
 						var cdata = document.getElementById('cdata');
 						cdata.innerHTML = html;
