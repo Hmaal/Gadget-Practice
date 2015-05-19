@@ -13,9 +13,9 @@
 				<script type='text/javascript'>
 					
 					var pref = new gadgets.Prefs();
-					//var prefUserName = prefs.getBool("BoolPrefName");
-					var prefLearnedToday = prefs.getString("StringPrefName");
-				  	var prefCondeNotesOpt = prefs.getBool('codeNotesOpt');
+					//var prefUserName = pref.getBool("BoolPrefName");
+					var prefLearnedToday = pref.getString('learnedToday');
+				  	var prefCondeNotesOpt = pref.getBool('codeNotesOpt');
 					  
 					var html = "";
 					
