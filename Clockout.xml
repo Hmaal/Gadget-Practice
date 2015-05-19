@@ -6,23 +6,19 @@
 					 author_email="judgemg09@gmail.com" />
 					 
 		<UserPref name="learnedToday" display_name="What did you learn today?" height="400" />
-		<UserPref name="codeNotes" display_name="Any code snippets today?" datatype="bool" default_value="false" required="true" />
+		<UserPref name="codeNotesOpt" display_name="Any code snippets today?" datatype="bool" default_value="false" required="true" />
 		
 		<Content type="html">
 			<![CDATA[ 
-				<!DOCTYPE HTML>
-				<html>
-				
-					<body>
-						<script>
-							var pref = new gadgets.Prefs();
-						</script>
-						
-						<b> Hello, World! </b> 
-						
-					</body>
-
-				</html>
+				<script type='text/javascript'>
+					var pref = new gadgets.Prefs();
+					var today = new Date();
+					var time = today.getTime();
+					
+					var html = "<!DOCTYPE HTML>"
+					html += " <b> Hello, World! </b> <br/> <br/>";
+					html += " Today is " + today + " and the time is " + time + ".";
+				</script>
 			]]>
 		</Content>
 	</Module>
