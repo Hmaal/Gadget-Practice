@@ -3,13 +3,17 @@
 	<Module>
 		<ModulePrefs title="Clockout Session"
 					 author="Hmaal"
-					 author_email="judgemg09@gmail.com" />
+					 author_email="judgemg09@gmail.com" 
+					 scrolling="true" />
 					 
 		<UserPref name="learnedToday" display_name="What did you learn today?" height="200" />
 		<UserPref name="codeNotesOpt" display_name="Any code snippets today?" datatype="bool" default_value="false" required="true" />
 		
 		<Content type="html">
 			<![CDATA[ 
+				
+				<!DOCTYPE HTML>
+				
 				<script type='text/javascript'>
 					
 					var pref = new gadgets.Prefs();
@@ -33,10 +37,15 @@
 						
 						//var html = ""; //<!DOCTYPE HTML>
 						html += " <b> Hello, World! </b> <br/> <br/>";
-						html += " Today is " + weekDay + " " + month + " " + date + ".";
+						html += "Today is " + weekDay + " " + month + " " + date + ".";
 						
 						var cdata = document.getElementById('cdata');
 						cdata.innerHTML = html;
+					}
+					
+					function loadForm()
+					{
+						//
 					}
 					
 					gadgets.util.registerOnLoadHandler(getDateInfo);
@@ -44,6 +53,8 @@
 				</script>
 				
 				<div id='cdata'> </div>
+					
+				<!--  -->
 				
 			]]>
 		</Content>
