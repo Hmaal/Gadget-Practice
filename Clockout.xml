@@ -26,7 +26,7 @@
 					var pref = new gadgets.Prefs();
 					//var prefUserName = pref.getBool("BoolPrefName");
 					var prefLearnedToday = pref.getString('learnedToday');
-				  	var prefCondeNotesOpt = pref.getBool('codeNotesOpt');
+				  	var prefCodeNotesOpt = pref.getBool('codeNotesOpt');
 					  
 					var html = "";
 					
@@ -62,6 +62,11 @@
 						//var html = ""; //<!DOCTYPE HTML>
 						html += " <b> Hello, World! </b> <br/> <br/>";
 						html += "Today is " + weekDay + " " + month + " " + date + ", and the year is " + year + ".";
+						
+						if(prefCodeNotesOpt)
+							html += "<br/> And the preferences should be showing.";
+						else
+							html += "<br/> And doesn't look like the preferences are being displayed.";
 						
 						var cdata = document.getElementById('cdata');
 						cdata.innerHTML = html;
