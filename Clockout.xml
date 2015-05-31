@@ -59,11 +59,11 @@
 						month = months[today.getMonth()];
 						date = today.getDate().toString();
 						weekDay = week[today.getDay()];
-						year = today.getYear();
+						year = today.getFullYear();
 						
 						//var html = ""; //<!DOCTYPE HTML>
 						html += " <b> Hello, World! </b> <br/> <br/>";
-						html += "Today is " + weekDay + " " + month + " " + date + ". And the year is " + year + ".";
+						html += "Today is " + weekDay + " " + month + " " + date + ", and the year is " + year + ".";
 						
 						var cdata = document.getElementById('cdata');
 						cdata.innerHTML = html;
