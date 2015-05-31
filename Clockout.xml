@@ -64,9 +64,13 @@
 						html += "Today is " + weekDay + " " + month + " " + date + ", and the year is " + year + ".";
 						
 						if(prefCodeNotesOpt)
+						{
 							html += "<br/> And the preferences should be showing.";
+						}
 						else
+						{
 							html += "<br/> And doesn't look like the preferences are being displayed.";
+						}
 						
 						var cdata = document.getElementById('cdata');
 						cdata.innerHTML = html;
@@ -88,10 +92,18 @@
 					}
 					
 					gadgets.util.registerOnLoadHandler(getDateInfo);
+					//gadgets.util.registerOnloadHandler(loadForm);
 					
 				</script>
 				
 				<div id='cdata'> </div>
+					
+				<div id='inputForm'>
+					<form>
+						<input type='text' name='eventTitle' placeholder='Event'>
+						<input type='checkbox' name='notesOpt'>
+					</form>	
+				</div>
 					
 				<!--  -->
 				
