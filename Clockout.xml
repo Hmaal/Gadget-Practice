@@ -21,8 +21,6 @@
 		<Content type="html">
 			<![CDATA[ 
 				
-				<!DOCTYPE HTML>
-				
 				<script type='text/javascript'>
 					
 					var pref = new gadgets.Prefs();
@@ -91,6 +89,8 @@
 				<div id='cdata'> </div>
 					
 				<!--  -->
+				
+				
 				
 			]]>
 		</Content>
