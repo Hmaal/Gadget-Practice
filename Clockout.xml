@@ -6,6 +6,7 @@
 					 author_email="judgemg09@gmail.com" 
 					 scrolling="true" />
 		<Require feature="setprefs" />
+		<Require feature="dynamic-height">
 					 
 		<UserPref name="learnedToday" display_name="What did you learn today?" height="200" datatype="string" />
 		<UserPref name="codeNotesOpt" display_name="Any code snippets today?" datatype="bool" default_value="false" required="true" />
