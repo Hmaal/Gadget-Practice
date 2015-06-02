@@ -100,10 +100,10 @@
 				<div id='cdata'> </div>
 					
 				<div id='inputForm'>
-					<form>
+					<!-- <form>
 						<input type='text' name='eventTitle' placeholder='Event'>
 						<input type='checkbox' name='notesOpt'>
-					</form>	
+					</form>	-->
 				</div>
 					
 				<!--  -->
