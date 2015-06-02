@@ -27,8 +27,8 @@
 					
 					var pref = new gadgets.Prefs();
 					//var prefUserName = pref.getBool("BoolPrefName");
-					var prefLearnedToday = pref.getString('learnedToday');
-				  	var prefCodeNotesOpt = pref.getBool('codeNotesOpt');
+					var prefLearnedToday = pref.getString("learnedToday");
+				  	var prefCodeNotesOpt = pref.getBool("codeNotesOpt");
 					  
 					var html = "";
 					
@@ -93,7 +93,7 @@
 						
 					}
 					
-					gadgets.util.registerOnLoadHandler(getDateInfo);
+					//gadgets.util.registerOnLoadHandler(getDateInfo);
 					//gadgets.util.registerOnloadHandler(loadForm);
 					
 				</script>
