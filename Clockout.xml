@@ -27,10 +27,10 @@
 				
 				<script type='text/javascript'>
 					
-					var pref = new gadgets.Prefs();
-					//var prefUserName = pref.getBool("BoolPrefName");
-					var prefLearnedToday = pref.getString("learnedToday");
-				  	var prefCodeNotesOpt = pref.getBool("codeNotesOpt");
+					var prefs = new gadgets.Prefs();
+					//var prefUserName = prefs.getBool("BoolPrefName");
+					var prefLearnedToday = prefs.getString("learnedToday");
+				  	var prefCodeNotesOpt = prefs.getBool("codeNotesOpt");
 					  
 					var html = "";
 					
@@ -76,7 +76,7 @@
 							html += "<br/> And doesn't look like the preferences are being displayed.";
 						}
 						
-						html += "Learned today = " + prefLearnedToday;
+						html += "<br/> Learned today = " + prefLearnedToday;
 						
 						var cdata = document.getElementById('cdata');
 						cdata.innerHTML = html;
@@ -105,10 +105,10 @@
 				
 					
 				<div id='inputForm'>
-					<!-- <form>
-						<input type='text' name='eventTitle' placeholder='Event'>
-						<input type='checkbox' name='notesOpt'>
-					</form>	-->
+					<!-- <form> -->
+						<input type='text' name='prefLearnedToday' placeholder='Event'>
+						<input type='checkbox' name='prefCodeNotesOpt'>
+					<!-- </form>	-->
 				</div>
 					
 				<!--  -->
