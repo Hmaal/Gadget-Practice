@@ -92,6 +92,12 @@
 						//eventEndDate += encodeURI(tomorrow.getYear() + '-' + tomorrow.getMonth() + '-' + tomorrow.getDay() + 'T00:00:00-00:00'); 
 					}
 					
+					function refresh()
+					{
+						var prefLearnedToday = prefs.getString("learnedToday");
+				  		var prefCodeNotesOpt = prefs.getBool("codeNotesOpt");
+					}
+					
 					function loadForm()
 					{
 						
@@ -107,7 +113,7 @@
 				<div id='inputForm'>
 					<!-- <form> -->
 						<input type='text' name='prefLearnedToday' placeholder='Event'>
-						<input type='checkbox' name='prefCodeNotesOpt'>
+						<input type='checkbox' name='prefCodeNotesOpt' onclick='refresh()'>
 					<!-- </form>	-->
 				</div>
 					
