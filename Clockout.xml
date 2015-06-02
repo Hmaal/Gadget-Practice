@@ -23,6 +23,8 @@
 		<Content type="html">
 			<![CDATA[ 
 				
+				<div id='cdata'> </div>
+				
 				<script type='text/javascript'>
 					
 					var pref = new gadgets.Prefs();
@@ -74,6 +76,8 @@
 							html += "<br/> And doesn't look like the preferences are being displayed.";
 						}
 						
+						html += "Learned today = " + prefLearnedToday;
+						
 						var cdata = document.getElementById('cdata');
 						cdata.innerHTML = html;
 					}
@@ -93,12 +97,12 @@
 						
 					}
 					
-					//gadgets.util.registerOnLoadHandler(getDateInfo);
+					gadgets.util.registerOnLoadHandler(getDateInfo);
 					//gadgets.util.registerOnloadHandler(loadForm);
 					
 				</script>
 				
-				<div id='cdata'> </div>
+				
 					
 				<div id='inputForm'>
 					<!-- <form>
